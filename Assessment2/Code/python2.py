@@ -256,17 +256,11 @@ def nine(string1, string2):
 	# Think about nesting for loops.
 
 def ten(X,Y):
-	l1 = [0]
-	l2 = [0]
-	l3= []
-	num1= 0
-	num2= 0
+	l1 = []
+
 	for i in range(X):
-		num1 += i
-		l1.append(num1)
-	for i in range(Y):
-		num2 += i
-		l2.append(num2)
-	l3 = l3.append(l1)
-	l3 = l3.append(l2)
-	return l3
+		for j in range(Y):
+			l1[i][j] = i*j
+	return l1
+
+print(ten(3,2))
