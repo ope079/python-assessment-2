@@ -204,10 +204,10 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	le = len(input)
-	string = input[: le - a + 1] + input[:-a+1 ]
-	return string
-print(eight("Hello", 3))
+	h = len(input)//2
+	mod = (len(input) + 1) % 2
+	return input[:h - mod] + input[h + 1:]
+
 
 
 	# <QUESTION 9>
@@ -230,6 +230,13 @@ def nine(string1, string2):
 	for i in string1:
 		if i in string2:
 			return True
+		else:
+			return False
+	for i in string2:
+		if i in string1:
+			return True
+		else:
+			return False
 	return False
 
 
